@@ -28,7 +28,7 @@
     ### Queue <br>
     ![3-2](./image/3-2.png)
 
-4. process를 fork 하고 exec 하는 과정 - code
+4. process를 fork 하고 exec 하는 과정 by c-language
     - 
             int main(){
                 pid t pid;
