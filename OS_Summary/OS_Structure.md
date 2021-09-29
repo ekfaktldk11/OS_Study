@@ -1,8 +1,8 @@
 ### OS Structure
 -------------------------------------------
 1. 프로세스 상태와 전이(transition)가 되는 시점
-### State of Process <br>
-![3-1](./image/3-1.png)
+    ### State of Process <br>
+    ![3-1](./image/3-1.png)
 
     New : 프로세스 생성단계
     Ready : 프로세스가 프로세서에게 처리되길 대기중
@@ -25,8 +25,8 @@
     - 이어서 B_프로세스를 PCB_B에서 가져와서 처리하게 되는데 이것을 context reload라고 한다.
 
 3. Queue
-### Queue <br>
-![3-2](./image/3-2.png)
+    ### Queue <br>
+    ![3-2](./image/3-2.png)
 
 4. process를 fork 하고 exec 하는 과정 - code
         int main(){
