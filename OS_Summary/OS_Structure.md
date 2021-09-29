@@ -29,22 +29,23 @@
     ![3-2](./image/3-2.png)
 
 4. process를 fork 하고 exec 하는 과정 - code
-        int main(){
-            pid t pid;
-            pid = fork() // fork() 를 통해 child process 생성
-            if (pid < 0 ){ // pid 가 음수 값이면 fork 실패 에러 메세지
-                fprintf(stderr, "Fork Failed");
-                return 1;
-            }
-            else if (pid == 0) { // pid 값이 0이면 child process
-                execlp("/bin/ls","ls",NULL);
-            }
-            else{ // pid값이 양수면 parent process로 child가 끝날 때 까지 기다림
-                wait(NULL);
-                printf("Child Complete");
-            }
-            return 0;
-        }
+    - 
+            int main(){
+                pid t pid;
+                pid = fork() // fork() 를 통해 child process 생성
+                if (pid < 0 ){ // pid 가 음수 값이면 fork 실패 에러 메세지
+                    fprintf(stderr, "Fork Failed");
+                    return 1;
+                }
+                else if (pid == 0) { // pid 값이 0이면 child process
+                    execlp("/bin/ls","ls",NULL);
+                }
+                else{ // pid값이 양수면 parent process로 child가 끝날 때 까지 기다림
+                    wait(NULL);
+                    printf("Child Complete");
+                }
+                return 0;
+            }
 
 5. 애플리케이션 작성시 여러 프로세스로 구성하는 것의 장점
     - 프로세스간의 정보공유 가능
