@@ -29,7 +29,7 @@
     ![3-2](./image/3-2.png)
 
 4. process를 fork 하고 exec 하는 과정 by c-language
-    - c source
+
             int main(){
                 pid t pid;
                 pid = fork() // fork() 를 통해 child process 생성

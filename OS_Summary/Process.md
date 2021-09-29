@@ -23,7 +23,7 @@
     - 병렬처리시 Task는 각 core가 처리해야할 데이터는 같지만 각 core마다 해야하는 일이 다름 (ex, +, -, *, /)
 
 6. Pthread API를 이용하여 간단한 멀티쓰레드 예제 프로그램 by c-language
-    - c source
+
             #include <pthread.h>
             #include <stdio.h>
             #include <stdlib.h>
