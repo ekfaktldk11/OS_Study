@@ -14,6 +14,7 @@
     - 프로세스 queue, critical section으로 보호되는 함수들, condition variable이 있다
 
 4. Dining-Philosophers problem을 세마포와 모니터를 이용하여 구현 by c-language
+
         while(true){
             wait(chopstick[i]); // 왼쪽 젓가락
             wait(chopstick[(i + 1) % 5]); // 오른쪽 젓가락
@@ -55,7 +56,7 @@
         }
         DiningPhilosophers.pickup(i); // 자원사용
          /** EAT **/
-        DiningPhilosophers.putdown(i); // 자원사요우건을 내려놓음
+        DiningPhilosophers.putdown(i); // 자원사용우선권을 내려놓음
         // monitor를 이용한 Dining Philosophers는 deadlock은 생기지 않지만  우선순위가 낮은
         // 프로세스가 계속 기다리게되는 starvation 현상이 발생할 순 있음
 
@@ -64,7 +65,7 @@
         - interrupt masks : time over 또는 프로세스가 끝나기 전까지 interrupt를 발생하지 못하게 하여 독점권을 얻게함
         - spinlocks : 독점권을 얻기위해 지속해서 사용권을 놓지않고 wait 상태가 아닌 ready 상태에 계속 머물러 있는 것 (짧은 프로세스들을 다룰 때 유용함)
         - dispatcher objects : mutx, semaphores, events, timers 등 condition variable처럼 사용 가능한 기능
-        
+
     - Linux
         - semaphores
         - atomic integers : variable을 atomic interger로 선언하면 증가 또는 감소할 때 critical section으로 자동으로 보호해줌
