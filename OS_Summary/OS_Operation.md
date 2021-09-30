@@ -1,11 +1,12 @@
 ### OS Operation
 -------------------------------------------
 1. 명령어(예, 화일 copy)가 수행되는 과정
-    (1) 명령어 사용자는 명령어 프로그램에 A라는 파일을 B라는 파일로 copy하는 명령어를 침.
-    (2) 명령어 프로그램은 ‘copy()’로 시스템 콜 인터페이스에 trap을 검
-    (3) OS mode는 user mode에서 kernel mode로 바뀌고 ‘copy()’ 가 있는 주소를 찾아 system call을 수행
-    (4) system은 A파일을 한줄 씩 읽으며 B파일로 복사하고 종료되면 리턴함
-    (5) 명령어 사용자는 명령어 프로그램에서 완료됐다는 것을 보고 마무리
+
+        (1) 명령어 사용자는 명령어 프로그램에 A라는 파일을 B라는 파일로 copy하는 명령어를 침.
+        (2) 명령어 프로그램은 ‘copy()’로 시스템 콜 인터페이스에 trap을 검
+        (3) OS mode는 user mode에서 kernel mode로 바뀌고 ‘copy()’ 가 있는 주소를 찾아 system call을 수행
+        (4) system은 A파일을 한줄 씩 읽으며 B파일로 복사하고 종료되면 리턴함
+        (5) 명령어 사용자는 명령어 프로그램에서 완료됐다는 것을 보고 마무리
 
 2. system call 이 처리되는 과정
     - user application에서 요청(trap)을 하면 system call을 보내 OS kernel mode 에 접근하게 되어 해당 system call 의 index를 확인하여 주소의 index번째 있는 system call을 수행하게 되고 결과를 리턴하고 종료된다.
