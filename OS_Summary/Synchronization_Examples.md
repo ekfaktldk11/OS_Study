@@ -1,6 +1,6 @@
 ### Synchronization Examples
 -------------------------------------------
-1. Bounded-buffer problem (Producer-consumer)에서 사용한 세마포의 종류와 용도.
+1. Bounded-buffer problem (Producer-consumer)에서 사용한 세마포의 종류와 용도
     - mutex : 버퍼를 사용하는데 독점권을 주기 위해서 사용
     - full : producer가 item을 만들 빈공간이 있는지 확인하기 위해서 사용
     - empty : comsumer가 사용할 item이 있는지 확인하기 위해서 사용
